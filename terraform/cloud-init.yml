@@ -1,0 +1,14 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - docker.io
+  - docker-compose
+  - git
+  
+
+runcmd:
+  - systemctl start docker
+  - systemctl enable docker
+  - git clone https://github.com/efti11/cloudmore-home-assignment.git /opt/cloudmore
+  - docker-compose up -d

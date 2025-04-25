@@ -1,0 +1,24 @@
+{
+    "dashboard": {
+      "id": null,
+      "title": "Tallinn Temperature",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "Current Temperature in Tallinn",
+          "targets": [
+            {
+              "expr": "tallinn_temperature",
+              "legendFormat": "{{instance}}",
+              "refId": "A"
+            }
+          ],
+          "datasource": "Prometheus",
+          "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 }
+        }
+      ],
+      "schemaVersion": 30
+    },
+    "overwrite": true
+  }
+  
